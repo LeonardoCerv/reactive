@@ -14,8 +14,6 @@
 /coverage
 
 src/app/dates/
-src/app/letter/
-src/app/songs/
 
 # next.js
 /.next/

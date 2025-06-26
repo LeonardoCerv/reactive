@@ -29,7 +29,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark flex min-h-screen flex-col`}
       >
-        <div className="py-8 animate-in fade-in-50 duration-500 flex flex-col flex-grow">
+        <div className="p-8 animate-in fade-in-50 duration-500 flex flex-col flex-grow">
           {children}
         </div>
       </body>
