@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Background from "@/components/background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,6 @@ export const metadata: Metadata = {
   description: "A special anniversary gift.",
 };
 
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -29,9 +29,9 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark flex min-h-screen flex-col`}
       >
-        <div className="p-8 animate-in fade-in-50 duration-500 flex flex-col flex-grow">
+        <Background>
           {children}
-        </div>
+        </Background>
       </body>
     </html>
   );
