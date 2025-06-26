@@ -19,6 +19,7 @@ export default function MemoriesPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Our Scrapbook</h1>
           <p className="text-lg text-muted-foreground mt-2">A collection of moments we've scattered in time.</p>
+          <p className="text-sm text-muted-foreground mt-1 italic">(Hint: Click on a photo!)</p>
         </div>
         <PhotoGallery images={images} />
       </div>
