@@ -39,14 +39,20 @@ export default function PhotoGallery({ images }: PhotoGalleryProps) {
             }}
           >
             <a href={`/memories/${index}`}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={style.width}
-                height={style.height}
-                data-ai-hint={image.hint}
-                className="object-cover w-full h-auto rounded-lg border border-primary"
-              />
+              {image.src ? (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={style.width}
+                  height={style.height}
+                  data-ai-hint={image.hint}
+                  className="object-cover w-full h-auto rounded-lg border border-primary"
+                />
+              ) : (
+                <div className="flex items-center justify-center w-full h-[180px] md:h-[200px] rounded-lg border border-dashed border-primary bg-muted">
+                  <span className="text-muted-foreground text-lg">No Image</span>
+                </div>
+              )}
             </a>
             <p className="text-center font-body text-sm mt-3 text-muted-foreground">{image.alt}</p>
           </div>

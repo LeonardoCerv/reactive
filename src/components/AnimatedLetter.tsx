@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Heart } from "lucide-react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export default function AnimatedLetter() {
@@ -21,7 +20,7 @@ export default function AnimatedLetter() {
         {/* Envelope Back & Body */}
         <div className="absolute top-0 left-0 w-full h-full bg-card rounded-lg [backface-visibility:hidden]">
           {/* This empty div forms the main body of the envelope */}
-                    <div className="absolute w-full h-full">
+          <div className="absolute w-full h-full">
             <div className="absolute top-0 left-0 w-1/2 h-full border-r border-primary/20 [clip-path:polygon(100%_0,_0_50%,_100%_100%)]"></div>
             <div className="absolute top-0 right-0 w-1/2 h-full border-l border-primary/20 [clip-path:polygon(0_0,_100%_50%,_0_100%)]"></div>
             <div className="absolute bottom-0 left-0 w-full h-1/2 border-t border-primary/20 [clip-path:polygon(0_0,_100%_0,_50%_100%)]"></div>
@@ -51,7 +50,9 @@ export default function AnimatedLetter() {
               It feels like just yesterday we started this journey, and I can't believe it's already been two months. Every moment with you feels like a page out of a beautiful storybook. You've brought so much light and laughter into my life, and I cherish every memory we've made together.
             </p>
             <div className="flex flex-col md:flex-row gap-4 my-6">
-              <Image src="https://placehold.co/300x200.png" data-ai-hint="happy couple" alt="A happy memory" width={300} height={200} className="rounded-md shadow-md transform -rotate-2" />
+              <div className="flex items-center justify-center w-[300px] h-[200px] rounded-md shadow-md transform -rotate-2 border border-dashed border-primary bg-muted">
+                <span className="text-muted-foreground text-lg">No Image</span>
+              </div>
               <p className="text-lg font-body leading-relaxed text-foreground/90 flex-1 self-center">
                 From our first date to our late-night talks, everything with you is special. I built this little app to celebrate us, a small token to show you how much you mean to me.
               </p>
@@ -69,7 +70,7 @@ export default function AnimatedLetter() {
             </div>
           </div>
         </div>
-        
+
         {/* Envelope flap */}
         <div
           className={cn(
@@ -79,15 +80,15 @@ export default function AnimatedLetter() {
           )}
         />
       </div>
-              <div
-              onClick={() => !isOpen && setIsOpen(true)}
-          className={cn(
-            "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%_+_1rem)] z-20 transition-all duration-700 ease-in-out rounded-full bg-pink-100 p-4",
-            isOpen ? "opacity-0 scale-0 -translate-y-20" : "opacity-100 scale-100"
-          )}
-        >
-          <Heart className="w-10 h-10 text-red-300 fill-red-300" />
-        </div>
+      <div
+        onClick={() => !isOpen && setIsOpen(true)}
+        className={cn(
+          "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[calc(50%_+_1rem)] z-20 transition-all duration-700 ease-in-out rounded-full bg-pink-100 p-4",
+          isOpen ? "opacity-0 scale-0 -translate-y-20" : "opacity-100 scale-100"
+        )}
+      >
+        <Heart className="w-10 h-10 text-red-300 fill-red-300" />
+      </div>
     </div>
   );
 }
