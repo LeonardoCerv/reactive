@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function AnimatedLetter() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ export default function AnimatedLetter() {
             </p>
             <div className="flex flex-col md:flex-row gap-4 my-6">
               <div className="flex items-center justify-center w-[300px] h-[200px] rounded-md shadow-md transform -rotate-2 border border-dashed border-primary bg-muted">
-                <span className="text-muted-foreground text-lg">No Image</span>
+                <Image src={"/img9.jpg"} alt={"our anniversary"} width={400} height={400} className="rounded-md" />
               </div>
               <p className="text-lg font-body leading-relaxed text-foreground/90 flex-1 self-center">
                 From our first date to our late-night talks, everything with you is special. I built this little app to celebrate us, a small token to show you how much you mean to me.

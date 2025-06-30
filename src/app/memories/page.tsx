@@ -3,14 +3,14 @@ import TimelineNavigation from "@/components/TimelineNavigation";
 
 export default function MemoriesPage() {
   const images = [
-    { src: '', alt: "A cherished memory", hint: "couple smiling" },
-    { src: '', alt: "A fun day out", hint: "beach sunset" },
-    { src: '', alt: "A special moment", hint: "holding hands" },
-    { src: '', alt: "A silly face", hint: "city lights" },
-    { src: '', alt: "Our favorite place", hint: "mountain hike" },
-    { src: '', alt: "An unforgettable trip", hint: "cafe window" },
-    { src: '', alt: "Just us", hint: "park picnic" },
-    { src: '', alt: "Anniversary dinner", hint: "fancy dinner" },
+    { src: '/img4.jpg', alt: "A cherished memory", hint: "couple smiling" },
+    { src: '/img8.jpg', alt: "A fun day out", hint: "beach sunset" },
+    { src: '/img1.jpg', alt: "A special moment", hint: "holding hands" },
+    { src: '/img2.jpg', alt: "A no face photo", hint: "beach trip" },
+    { src: '/img5.jpg', alt: "Our favorite place", hint: "mountain hike" },
+    { src: '/img7.jpg', alt: "An unforgettable trip", hint: "surfing" },
+    { src: '/img6.jpg', alt: "Just us", hint: "park picnic" },
+    { src: '/img3.jpg', alt: "Anniversary dinner", hint: "fancy dinner" },
   ];
 
   return (
